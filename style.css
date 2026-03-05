@@ -1,3 +1,4 @@
+/* GENERAL BODY */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -6,6 +7,7 @@ body {
   overflow-x: hidden;
 }
 
+/* BOOK ENTRANCE */
 #book-entrance {
   display: flex;
   flex-direction: column;
@@ -13,7 +15,13 @@ body {
   justify-content: center;
   height: 100vh;
   text-align: center;
+  background: radial-gradient(circle, rgba(30,30,47,1) 0%, rgba(50,20,60,1) 100%);
   animation: fadeIn 2s;
+}
+
+#fairy {
+  font-size: 50px;
+  animation: float 3s infinite ease-in-out;
 }
 
 #book {
@@ -24,17 +32,61 @@ body {
   animation: sparkle 3s infinite;
 }
 
+#book h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#book p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+#setup label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+#setup select {
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
 button {
   padding: 10px 20px;
-  margin-top: 10px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   background-color: #ff69b4;
   color: white;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 
+button:hover {
+  transform: scale(1.1);
+}
+
+/* HOMEPAGE */
+#homepage {
+  display: none;
+  text-align: center;
+  padding: 50px;
+}
+
+.home-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s;
+}
+
+.home-text {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+/* ANIMATIONS */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -44,4 +96,9 @@ button {
   0% {box-shadow: 0 0 20px #ff69b4;}
   50% {box-shadow: 0 0 50px #ffb6c1;}
   100% {box-shadow: 0 0 20px #ff69b4;}
+}
+
+@keyframes float {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-20px);}
 }
