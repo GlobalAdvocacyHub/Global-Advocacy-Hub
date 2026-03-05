@@ -1,79 +1,47 @@
-/* Global body settings */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #FFF9C4, #FFEBEE); /* pastel yellow → soft pink */
-    color: #333333;
-    margin: 0;
-    padding: 0;
-}
-/* Header */
-header {
-    background-color: #F8BBD0; /* pastel pink */
-    color: #FFFFFF;
-    padding: 25px;
-    text-align: center;
-    border-bottom: 4px solid #FFEB3B; /* pastel yellow accent */
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e2f;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-/* Main sections */
-section {
-    padding: 20px;
-    margin: 15px;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.05);
+#book-entrance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  animation: fadeIn 2s;
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: #F48FB1; /* soft pink pastel */
+#book {
+  background: linear-gradient(to bottom right, #6a1b9a, #ab47bc);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+  animation: sparkle 3s infinite;
 }
 
-/* Buttons */
 button {
-    background-color: #FFECB3; /* pastel yellow */
-    color: #F06292; /* pastel pink text */
-    border: none;
-    padding: 12px 25px;
-    border-radius: 12px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
 }
 
-button:hover {
-    transform: scale(1.05);
-    background-color: #FFF176; /* slightly brighter yellow */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-/* Links */
-a {
-    color: #F06292;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Forms */
-input[type="text"], textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #F8BBD0; /* pastel pink */
-    color: #FFFFFF;
-    margin-top: 20px;
-    border-top: 4px solid #FFEB3B; /* pastel yellow accent */
+@keyframes sparkle {
+  0% {box-shadow: 0 0 20px #ff69b4;}
+  50% {box-shadow: 0 0 50px #ffb6c1;}
+  100% {box-shadow: 0 0 20px #ff69b4;}
 }
