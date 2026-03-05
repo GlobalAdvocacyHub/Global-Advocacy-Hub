@@ -1,47 +1,23 @@
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #1e1e2f;
-  color: #fff;
-  overflow-x: hidden;
-}
+const enterButton = document.getElementById('enter-site');
+const bookEntrance = document.getElementById('book-entrance');
+const homepage = document.getElementById('homepage');
 
-#book-entrance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  animation: fadeIn 2s;
-}
+enterButton.addEventListener('click', () => {
+  // Grab selected theme and age
+  const theme = document.getElementById('theme-select').value;
+  const age = document.getElementById('age-select').value;
 
-#book {
-  background: linear-gradient(to bottom right, #6a1b9a, #ab47bc);
-  padding: 50px;
-  border-radius: 20px;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
-  animation: sparkle 3s infinite;
-}
+  console.log('User selected theme:', theme);
+  console.log('User selected age:', age);
 
-button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background-color: #ff69b4;
-  color: white;
-  font-weight: bold;
-}
+  // Apply theme (example)
+  if (theme === 'space') {
+    document.body.style.background = '#0b0c27';
+  } else if (theme === 'forest') {
+    document.body.style.background = '#2e4a1f';
+  }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes sparkle {
-  0% {box-shadow: 0 0 20px #ff69b4;}
-  50% {box-shadow: 0 0 50px #ffb6c1;}
-  100% {box-shadow: 0 0 20px #ff69b4;}
-}
+  // Hide book, show homepage
+  bookEntrance.style.display = 'none';
+  homepage.style.display = 'block';
+});
